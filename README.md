@@ -37,3 +37,5 @@ because Cloud Run does not allow the `_` character for service names.
 This demo also shows a way to run Rust integration tests with Github Actions.
 Take a look at `.github/workflows/ci.yml` for the workflow description and at
 `tests/` to see how it works.
+
+Run the tests via `cargo test`.
