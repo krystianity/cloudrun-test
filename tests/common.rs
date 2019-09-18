@@ -1,5 +1,14 @@
-use cloudrun_server::CloudrunServer;
+use std::process::{Child, Command};
 
-pub fn get_server() {
-    CloudrunServer::new("0.0.0.0:8088")
+pub fn setup() -> Child {
+    Command::new("cargo")
+        .args(&["run"])
+        .env("PORT", "8088")
+        .spawn()
+        .expect("failed to start cloudrun_server")
+}
+
+pub fn tear_down(child: &mut Child) {
+    child.kill().unwrap();
+    child.wait().unwrap();
 }

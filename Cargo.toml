@@ -4,14 +4,6 @@ version = "0.1.0"
 authors = ["Chris Froehlingsdorf <chris@5cf.de>"]
 edition = "2018"
 
-[lib]
-name = "cloudrun_server"
-path = "src/cloudrun_server.rs"
-
-[[bin]]
-name = "cloudrun-test"
-path = "src/main.rs"
-
 [dependencies]
 log = "0.4.0"
 env_logger = "0.6.2"
