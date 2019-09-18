@@ -1,4 +1,4 @@
 FROM scratch
-ADD target/x86_64-unknown-linux-musl/release/cloudrun-test /
+ADD target/x86_64-unknown-linux-musl/release/cloudrun_test /
 ENV RUST_LOG info
-CMD ["/cloudrun-test"]
+CMD ["/cloudrun_test"]

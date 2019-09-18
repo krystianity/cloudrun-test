@@ -20,7 +20,7 @@ fn post_again() -> Result<HttpResponse> {
     Ok(HttpResponse::Ok().body("POST - Hello world again!"))
 }
 
-pub fn config_app(cfg: &mut web::ServiceConfig) {
+fn config_app(cfg: &mut web::ServiceConfig) {
     cfg.service(get_index);
     cfg.service(get_again);
     cfg.service(post_again);

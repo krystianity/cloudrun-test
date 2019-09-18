@@ -1,1 +1,0 @@
-docker build -t eu.gcr.io/${GOOGLE_PROJECT_ID}/cloudrun-test .
